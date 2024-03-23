@@ -201,8 +201,8 @@ const Header: React.FC = () => {
                             </Link>
                         </Menu>
                         <SearchMenu>
-                            <SearchContainer>
-                                <SearchFormWrapper ref={searchRef}>
+                            <SearchContainer ref={searchRef}>
+                                <SearchFormWrapper>
                                     <SearchForm>
                                         <SearchLabel>
                                             <AiOutlineSearch />
@@ -213,18 +213,18 @@ const Header: React.FC = () => {
                                         </SearchLabel>
                                     </SearchForm>
                                 </SearchFormWrapper>
+                                <SearchResultWrapper>
+                                    <SearchResultList>
+                                        {
+                                            searchResult?.results.map((searchResultItem) => (
+                                                <Link href={`/movie/${searchResultItem.id}`} key={searchResultItem.id}>
+                                                    <SearchResultListItem>{searchResultItem.title}</SearchResultListItem>
+                                                </Link>
+                                            ))
+                                        }
+                                    </SearchResultList>
+                                </SearchResultWrapper>
                             </SearchContainer>
-                            <SearchResultWrapper>
-                                <SearchResultList>
-                                    {
-                                        searchResult?.results.map((searchResultItem) => (
-                                            <Link href={`/movie/${searchResultItem.id}`} key={searchResultItem.id}>
-                                                <SearchResultListItem>{searchResultItem.title}</SearchResultListItem>
-                                            </Link>
-                                        ))
-                                    }
-                                </SearchResultList>
-                            </SearchResultWrapper>
                         </SearchMenu>
                         <Menu>
                             <SignIn onClick={handleLoginModal}>로그인</SignIn>
