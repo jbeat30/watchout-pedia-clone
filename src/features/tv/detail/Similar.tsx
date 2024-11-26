@@ -93,7 +93,7 @@ const Card: React.FC<MovieProps> = ({ id, posterPath, title, voteAverage }) => {
     <Link href={`/tv/${id}`} target="_blank">
       <CardContainer>
         <PosterWrapper>
-          <Poster src={`${process.env.REACT_APP_IMAGE_PREFIX}/${posterPath}`} />
+          <Poster src={`${import.meta.env.VITE_APP_IMAGE_PREFIX}/${posterPath}`} />
         </PosterWrapper>
         <Info>
           <Title>{title}</Title>

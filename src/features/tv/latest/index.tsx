@@ -32,7 +32,7 @@ const LatestTvSection: React.FC = () => {
             key={latestTvResponse.data.id}
             linkUrl={`/tv/${latestTvResponse.data.id}`}
             title={latestTvResponse.data.name}
-            posterPath={`${process.env.REACT_APP_IMAGE_PREFIX}/${latestTvResponse.data.poster_path}`}
+            posterPath={`${import.meta.env.VITE_APP_IMAGE_PREFIX}/${latestTvResponse.data.poster_path}`}
             voteAverage={latestTvResponse.data.vote_average}
             year={getYear(latestTvResponse.data.first_air_date)}
           />

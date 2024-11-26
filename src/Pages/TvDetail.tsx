@@ -245,7 +245,7 @@ const TvDetail: React.FC = () => {
               <Backdrop>
                 <LeftBlur />
                 <BackdropImage
-                  imageUrl={`${process.env.REACT_APP_IMAGE_PREFIX}/${data.backdrop_path}`}
+                  imageUrl={`${import.meta.env.VITE_APP_IMAGE_PREFIX}/${data.backdrop_path}`}
                 >
                   <LeftGradient />
                   <RightGradient />
@@ -258,7 +258,7 @@ const TvDetail: React.FC = () => {
               <Container>
                 <PosterWrapper>
                   <Poster
-                    src={`${process.env.REACT_APP_IMAGE_PREFIX}/${data.poster_path}`}
+                    src={`${import.meta.env.VITE_APP_IMAGE_PREFIX}/${data.poster_path}`}
                   />
                 </PosterWrapper>
                 <ContentWrapper>

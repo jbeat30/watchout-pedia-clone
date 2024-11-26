@@ -9,7 +9,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 function App() {
   return (
     <>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter basename={import.meta.env.PUBLIC_URL}>
         <Routes>
           <Route path="/" element={<MoviePage />} />
           <Route path="/tv" element={<TvPage />} />

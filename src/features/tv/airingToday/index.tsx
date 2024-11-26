@@ -33,7 +33,7 @@ const AiringTodayTvSection: React.FC = () => {
               key={tv.id}
               linkUrl={`/tv/${tv.id}`}
               title={tv.name}
-              posterPath={`${process.env.REACT_APP_IMAGE_PREFIX}/${tv.poster_path}`}
+              posterPath={`${import.meta.env.VITE_APP_IMAGE_PREFIX}/${tv.poster_path}`}
               voteAverage={tv.vote_average}
               year={getYear(tv.first_air_date)}
             />

@@ -33,7 +33,7 @@ const NowPlayingSection: React.FC = () => {
               key={movie.id}
               linkUrl={`/movie/${movie.id}`}
               title={movie.title}
-              posterPath={`${process.env.REACT_APP_IMAGE_PREFIX}/${movie.poster_path}`}
+              posterPath={`${import.meta.env.VITE_APP_IMAGE_PREFIX}/${movie.poster_path}`}
               voteAverage={movie.vote_average}
               year={getYear(movie.release_date)}
             />

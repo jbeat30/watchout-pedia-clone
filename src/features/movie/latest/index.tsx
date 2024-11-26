@@ -31,7 +31,7 @@ const LatestMovieSection: React.FC = () => {
             key={latestMovieResponse.data.id}
             linkUrl={`/movie/${latestMovieResponse.data.id}`}
             title={latestMovieResponse.data.title}
-            posterPath={`${process.env.REACT_APP_IMAGE_PREFIX}/${latestMovieResponse.data.poster_path}`}
+            posterPath={`${import.meta.env.VITE_APP_IMAGE_PREFIX}/${latestMovieResponse.data.poster_path}`}
             voteAverage={latestMovieResponse.data.vote_average}
             year={getYear(latestMovieResponse.data.release_date)}
           />
